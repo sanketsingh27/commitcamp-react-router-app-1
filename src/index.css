@@ -1,0 +1,17 @@
+#layout {
+  border: blue 2px solid;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: 10px;
+}
+
+#navigation {
+  border: red 2px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+#components {
+  border: yellowgreen 2px solid;
+}

@@ -1,24 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import Navigation from "./Navigation";
+import "./index.css";
 
-import Courses from "./Courses";
-import Course from "./Course";
+import App from "./App";
+import Layout from "./Layout";
+import Category from "./Category";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <Navigation />
     <Routes>
-      <Route index element={<App />} />
-      <Route path="home" element={<App />} />
-
-      <Route path="courses" element={<Courses />}>
-        <Route path=":subject" element={<Course />} />
+      <Route element={<Layout />}>
+        <Route index element={<App />} />
+        <Route path="category" element={<Category />} />
+        <Route path="*" element={<NoMatch />} />
       </Route>
     </Routes>
   </BrowserRouter>
 );
+
+function NoMatch() {
+  return <h1>Not a valid page</h1>;
+}

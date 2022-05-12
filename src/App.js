@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <h1>The best course site every</h1>
+      <h1>basics app</h1>
     </>
   );
 }

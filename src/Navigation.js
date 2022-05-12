@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Navigation() {
-  const linkArr = ["home", "courses"];
+  const linkArr = ["home", "users", "category", "product"];
 
   const linkStyle = {
     display: "inlineBlock",
@@ -12,12 +12,12 @@ export default function Navigation() {
   };
 
   return (
-    <div>
+    <>
       {linkArr.map((link, index) => (
         <Link style={linkStyle} key={index} to={`/${link}`}>
           {link}
         </Link>
       ))}
-    </div>
+    </>
   );
 }
